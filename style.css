@@ -1,0 +1,17 @@
+/* beige: #ebe3d6 gold: #c5842f */
+
+* {
+  font-family: cronos-pro, sans-serif;
+}
+h1 {
+  font-size: 25px;
+  color: #c5842f;
+}
+h2 {
+  font-size: 22px;
+  color: black;
+}
+p {
+  font-size: 16px;
+  color: black;
+}
