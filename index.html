@@ -4,34 +4,67 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"/>
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Code Assessment Quiz</title>
     <!--  CSS Stylesheet Link -->
-    <link rel="stylesheet" href= "./style.css" />
-
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
   </head>
 
   <body>
-    <strong<h1> Welcome to the Coding Assessments Quiz</h1></strong>
-    <br>
-    <p> Try to answer the following code-related  questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+    <div class="quiz">
+      <strong><h1>Welcome to the Coding Assessment Quiz</h1></strong>
+      <br />
+      <p>
+        Try to answer the following code-related questions within the time
+        limit. Keep in mind that incorrect answers will penalize your score/time
+        by ten seconds!
+      </p>
+      <br />
+      <!-- Start Button -->
+      <button id="startBTN">Start Quiz</button>
+    </div>
+    <!--  WHEN startbutton click then it show the questionsContainer -->
+    <div class="questionsContainer">
+      <header class="quizInfo">
+        <!-- INSERT SCORE + NUMBER FROM JAVASCRIPT -->
+        <div clas="scoreContainer">
+          <div id="score">Score:</div>
+          <div id="numScore">3</div>
+        </div>
+        <br />
+        <div class="timerContainer">
+          <div id="timer_txt">Time Left:</div>
+          <div id="timerSec">15</div>
+        </div>
+      </header>
+      <!-- INSERT QUESTIONS & ANSWERS HERE FROM JAVASCRIPT -->
+      <section>
+        <div class="questionText"></div>
+        <div class="optionList"></div>
+        <button id="next">Next</button>
+      </section>
+    </div>
+    <!-- Result Box -->
+    <div class="done">
+      <h3>All DONE!!!</h3>
+      <!-- score from javascript -->
+      <p id="score">Final Score:</p>
+      <form>
+        <label for="inital">Enter Inital here:</label>
+        <input
+          type="text"
+          id="inital"
+          name="inital"
+        />
+      </form>
+      <button id="submit">Submit</button>
+    </div>
 
-    <div class = "questions">
-        <!-- INSERT QUESTIONS & ANSWERS HERE -->
-        <div>
-        <h2> Questions 1</h2>
-        <ul>
-            <button><li> Option 1</li></button>
-            <button><li> Option 2</li></button>
-            <button><li> Option 3</li></button>
-            <button><li> Option 4</li></button>
-            
-        </ul>
-    </div>
-   
-</div>
-    </div>
-    <!-- Javascript link -->
+    <!--Javascript link -->
     <script scr="script.js"></script>
   </body>
 </html>

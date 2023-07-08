@@ -1,17 +1,107 @@
 /* beige: #ebe3d6 gold: #c5842f */
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: cronos-pro, sans-serif;
 }
-h1 {
-  font-size: 25px;
+body {
+  background-color: #c5842f;
+}
+::selection {
+  color: white;
+  background-color: #c5842f;
+}
+div.quiz,
+div.questionsContainer,
+div.done {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 (white);
+}
+div.quiz.activeInfo,
+div.questionsContainer.activeInfo,
+div.done.activeInfo {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+.quiz h1 {
+  color: #ebe3d6;
+  text-align: center;
+}
+.quiz p {
+  color: #ebe3d6;
+  text-align: center;
+}
+#startBTN {
   color: #c5842f;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 2px;
+  background-color: #ebe3d6;
+  border: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-h2 {
-  font-size: 22px;
-  color: black;
+div.questionsContainer {
+  width: 500px;
+  background-color: #ebe3d6;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
-p {
-  font-size: 16px;
-  color: black;
+div.questionContainer header {
+  position: relative;
+  z-index: 2;
+  height: 700px;
+  padding: 0 30px;
+  background-color: #ebe3d6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.questionContainer header .quizInfo {
+  color: #c5842f;
+  background-color: #ebe3d6;
+  border: 1px solid white;
+  height: 45px;
+  padding: 0 8px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 145px;
+}
+section {
+  padding: 25px 30px 20px 30px;
+  background-color: #ebe3d6;
+}
+section .questionText {
+  font-size: 25px;
+  font-weight: 600;
+}
+section .optionList {
+  padding: 20px 0px;
+  display: block;
+}
+section .optionList .option {
+  background-color: #ebe3d6;
+  border-radius: 2px;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
