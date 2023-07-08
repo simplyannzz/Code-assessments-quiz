@@ -13,18 +13,18 @@ body {
   color: white;
   background-color: #c5842f;
 }
-div.quiz,
-div.questionsContainer,
-div.done {
+.quiz,
+.quizBox,
+.done {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px 0 (white);
 }
-div.quiz.activeInfo,
-div.questionsContainer.activeInfo,
-div.done.activeInfo {
+.quiz.activeInfo,
+.quizBox.activeQuiz,
+.done.activeDone {
   opacity: 1;
   z-index: 5;
   pointer-events: auto;
@@ -52,17 +52,18 @@ div.done.activeInfo {
   align-items: center;
   justify-content: flex-end;
 }
-div.questionsContainer {
+.questionsContainer {
   width: 500px;
   background-color: #ebe3d6;
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
-}
-div.questionContainer header {
-  position: relative;
   z-index: 2;
+}
+.questionContainer header {
+  position: relative;
+  /* z-index: 2; */
   height: 700px;
   padding: 0 30px;
   background-color: #ebe3d6;
@@ -70,7 +71,7 @@ div.questionContainer header {
   align-items: center;
   justify-content: space-between;
 }
-div.questionContainer header .quizInfo {
+.questionContainer header .quizInfo {
   color: #c5842f;
   background-color: #ebe3d6;
   border: 1px solid white;
@@ -86,7 +87,7 @@ section {
   padding: 25px 30px 20px 30px;
   background-color: #ebe3d6;
 }
-section .questionText {
+.questionText {
   font-size: 25px;
   font-weight: 600;
 }
@@ -94,7 +95,7 @@ section .optionList {
   padding: 20px 0px;
   display: block;
 }
-section .optionList .option {
+.optionList .option {
   background-color: #ebe3d6;
   border-radius: 2px;
   padding: 8px 15px;
@@ -104,4 +105,80 @@ section .optionList .option {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.optionList .option:last-child {
+  margin-bottom: 0px;
+}
+.optionList .option:hover {
+  color: black;
+  background-color: #ebe3d6;
+  border: 1px solid black;
+}
+.optionList .option.correct {
+  color: green;
+  background-color: #ebe3d6;
+  border: 1 px solid black;
+}
+.optionList .option.incorrect {
+  color: red;
+  background-color: #ebe3d6;
+  border: 1 px solid black;
+}
+.optionList .option.disable {
+  pointer-events: none;
+}
+#next {
+  color: #c5842f;
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 2px;
+  background-color: #ebe3d6;
+  border: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#next button:hover {
+  background-color: blanchedalmond;
+}
+#next button.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+footer {
+  height: 60px;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #c5842f;
+  color: #ebe3d6;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+footer #scoreFinal {
+  display: flex;
+  user-select: none;
+}
+#submit {
+  color: #c5842f;
+  font-size: 15px;
+  padding: 10px;
+  margin-top: 40px;
+  border-radius: 2px;
+  background-color: #ebe3d6;
+  border: transparent;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }

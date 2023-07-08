@@ -28,7 +28,7 @@
       <button id="startBTN">Start Quiz</button>
     </div>
     <!--  WHEN startbutton click then it show the questionsContainer -->
-    <div class="questionsContainer">
+    <div class="quizBox">
       <header class="quizInfo">
         <!-- INSERT SCORE + NUMBER FROM JAVASCRIPT -->
         <div clas="scoreContainer">
@@ -49,10 +49,11 @@
       </section>
     </div>
     <!-- Result Box -->
-    <div class="done">
+    <footer class="done">
       <h3>All DONE!!!</h3>
       <!-- score from javascript -->
-      <p id="score">Final Score:</p>
+      <div id="scoreFinal">Final Score:</div>
+      <div id="scoreFinalNum">3</div>
       <form>
         <label for="inital">Enter Inital here:</label>
         <input
@@ -62,7 +63,7 @@
         />
       </form>
       <button id="submit">Submit</button>
-    </div>
+    </footer>
 
     <!--Javascript link -->
     <script scr="script.js"></script>
