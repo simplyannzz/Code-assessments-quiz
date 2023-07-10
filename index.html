@@ -25,13 +25,13 @@
       </p>
       <br />
       <!-- Start Button -->
-      <button id="startBTN">Start Quiz</button>
+      <button id="buttonStart" class="startBTN">Start Quiz</button>
     </div>
     <!--  WHEN startbutton click then it show the questionsContainer -->
-    <div class="quizBox">
-      <header class="quizInfo">
+    <div id="quizBox" class="quizBox">
+        <section class="quizInfo">
         <!-- INSERT SCORE + NUMBER FROM JAVASCRIPT -->
-        <div clas="scoreContainer">
+        <div class="scoreContainer">
           <div id="score">Score:</div>
           <div id="numScore">3</div>
         </div>
@@ -39,14 +39,16 @@
         <div class="timerContainer">
           <div id="timer_txt">Time Left:</div>
           <div id="timerSec">15</div>
+        </section>
         </div>
-      </header>
       <!-- INSERT QUESTIONS & ANSWERS HERE FROM JAVASCRIPT -->
-      <section>
+      <div class="qaBox">
         <div class="questionText"></div>
         <div class="optionList"></div>
+        <div class = "option"></div>
         <button id="next">Next</button>
-      </section>
+    </div>
+      
     </div>
     <!-- Result Box -->
     <footer class="done">
@@ -66,6 +68,8 @@
     </footer>
 
     <!--Javascript link -->
-    <script scr="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="./js/questions.js"></script> -->
+    <script src="./js/script.js"></script>
   </body>
 </html>

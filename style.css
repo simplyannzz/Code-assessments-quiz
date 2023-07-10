@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: cronos-pro, sans-serif;
+  font-family: "cronos-pro", sans-serif;
 }
 body {
   background-color: #c5842f;
@@ -38,13 +38,13 @@ body {
   color: #ebe3d6;
   text-align: center;
 }
-#startBTN {
+.startBTN {
   color: #c5842f;
   font-size: 15px;
   padding: 10px;
   border-radius: 2px;
   background-color: #ebe3d6;
-  border: transparent;
+  border: none;
   transform: translate(-50%, -50%) scale(1);
   pointer-events: auto;
   transition: all 0.3s ease;
@@ -52,8 +52,8 @@ body {
   align-items: center;
   justify-content: flex-end;
 }
-.questionsContainer {
-  width: 500px;
+.quizBox {
+  width: 950px;
   background-color: #ebe3d6;
   transform: translate(-50%, -50%) scale(1);
   opacity: 0;
@@ -61,20 +61,11 @@ body {
   transition: all 0.3s ease;
   z-index: 2;
 }
-.questionContainer header {
-  position: relative;
-  /* z-index: 2; */
-  height: 700px;
-  padding: 0 30px;
-  background-color: #ebe3d6;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.questionContainer header .quizInfo {
+
+.quizInfo {
   color: #c5842f;
   background-color: #ebe3d6;
-  border: 1px solid white;
+  padding: 100px 500px 100px 500px;
   height: 45px;
   padding: 0 8px;
   border-radius: 2px;
@@ -82,10 +73,10 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 145px;
+  height: 500px;
 }
-section {
-  padding: 25px 30px 20px 30px;
-  background-color: #ebe3d6;
+.scoreContainer {
+  text-align: left;
 }
 .questionText {
   font-size: 25px;
