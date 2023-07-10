@@ -73,13 +73,12 @@ let questions = [
     ],
   },
 ];
-
+// To start Quiz
 var startQuiz = () => {
   console.log("click");
   console.log(quizBoxEl);
   quizBoxEl.classList.add("activeQuiz"); //show quiz (DOESNT WORK)
   showQuestion(0);
-  //   queCounter(1);
   setTime(15);
 };
 let timeValue = 15;
@@ -89,15 +88,18 @@ let userScore = 0;
 let counter;
 
 var nextQuestion = () => {
+  console.log("click");
+  console.log(questions[1]);
+  nextBtn.classList.add(questions[1]);
+
   if (que_count < questions.length - 1) {
     que_count++;
     que_numb++;
     showQuestion(que_count);
-    // queCounter(que_numb);
     clearInterval(counter);
     starTimer(timeValue);
     timeText.textContent = "Time Left";
-    nextBtn.classList.remove("show");
+    nextBtn.classList.remove(question[0]);
   } else {
     clearInterval(counter);
     showResult();
@@ -131,7 +133,7 @@ function showQuestion(index) {
   //making onclick for all options
   const option = optionListEl.querySelector(".option");
   for (i = 0; i < option.length; i++) {
-    option[i].setattribute("onclick", "optionSelected(this)");
+    option[i].addEventListener("click", "optionSelected"(this));
   }
 }
 //  if user click on an option
@@ -176,8 +178,9 @@ function showResult() {
 
 // NEED SOMETHING FOR FORM INPUT
 
-var secondsLeft = 15;
 // Timer
+var secondsLeft = 15;
+
 function setTime() {
   var timerInterval = setInterval(function () {
     secondsLeft--;

@@ -8,6 +8,7 @@
 - [Usage](#usage)
 - [Credits](#credits)
 - [License](#license)
+- [Deployed](#deployed)
 
 ## Installation
 
@@ -20,10 +21,17 @@ I used the tools that I had on my computer, like Git, Vscode, Github, and Google
 ## Credits
 
 resources:
+https://www.w3schools.com/jsref/met_document_addeventlistener.asp
+https://www.w3schools.com/js/js_variables.asp
+https://www.youtube.com/watch?v=xZXW5SnCiWI
 
 ## License
 
 The license I choose for this project is the MIT License.
+
+## Deployed
+
+link:
 
 ## contact me
 
