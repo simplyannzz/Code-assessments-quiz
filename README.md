@@ -19,7 +19,7 @@ I used the tools that I had on my computer, like Git, Vscode, Github, and Google
 ## Usage
 
 ![alt text](./assest/1.png)
-![alt text](./assesgitt/2.png)
+![alt text](./assest/2.png)
 
 ## Credits
 
