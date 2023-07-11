@@ -18,7 +18,8 @@ I used the tools that I had on my computer, like Git, Vscode, Github, and Google
 
 ## Usage
 
-![alt text](./Assets/w3.1.png)
+![alt text](./asset/1.png)
+![alt text](./asset/2.png)
 
 ## Credits
 
