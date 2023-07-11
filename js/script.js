@@ -87,6 +87,7 @@ let que_numb = 1;
 let userScore = 0;
 let counter;
 
+// Next Button ( DONT SEE BUTTON :(( )
 var nextQuestion = () => {
   console.log("click");
   console.log(questions[1]);
@@ -129,52 +130,55 @@ function showQuestion(index) {
     "</span></div>";
   que_text.innerHTML = que_tag;
   optionListEl.innerHTML = option_tag;
-
-  //making onclick for all options
-  const option = optionListEl.querySelector(".option");
-  for (i = 0; i < option.length; i++) {
-    option[i].addEventListener("click", "optionSelected"(this));
-  }
 }
-//  if user click on an option
-function optionSelected(answer) {
-  clearInterval(counter);
-  let userAns = answer.textContent;
-  let correctAns = questions[que_count].answer;
-  const allOptions = optionListEl.children.length;
 
-  if (userAns == correctAns) {
-    userScore += 1;
-    answer.classList.add("correct");
-    console.log("correct Answer");
-    console.log(" Your correct answers = " + userScore);
-  } else {
-    answer.classList.add("incorrect");
-    console.log("Wrong Answer");
+// NOT WORKING LOL
 
-    for (i = 0; i < allOptions; i++) {
-      if (optionListEl.children[i].textContent == correctAns) {
-        optionListEl.children[i].setAttribute("class", "option correct");
-        console.log("Auto selected correct answer.");
-      }
-    }
-  }
-  for (i = 0; i < allOptions; i++) {
-    optionListEl.children[i].classList.add("disable");
-  }
-  nextBtn.classList.add("show");
-}
-// to show the result at the end (NEED HELP)
-function showResult() {
-  quizBoxEl.remove("activeQuiz");
-  doneEl.classList.add("activeDone");
-  const scoreFinal = quizBoxEl.querySelector("#finalScore");
+//   //making click for all options
+//   const option = optionListEl.querySelector(".option");
+//   for (i = 0; i < option.length; i++) {
+//     option[i].addEventListener("click", "optionSelected"(this));
+//   }
+// }
+// //  if user click on an option
+// function optionSelected(answer) {
+//   clearInterval(counter);
+//   let userAns = answer.textContent;
+//   let correctAns = questions[que_count].answer;
+//   const allOptions = optionListEl.children.length;
 
-  if (userScore >= 0) {
-    let scoreTag = "Final Score:" + userScore;
-    scorefinalEl.innerHTML = scoreTag;
-  }
-}
+//   if (userAns == correctAns) {
+//     userScore += 1;
+//     answer.classList.add("correct");
+//     console.log("correct Answer");
+//     console.log(" Your correct answers = " + userScore);
+//   } else {
+//     answer.classList.add("incorrect");
+//     console.log("Wrong Answer");
+
+//     for (i = 0; i < allOptions; i++) {
+//       if (optionListEl.children[i].textContent == correctAns) {
+//         optionListEl.children[i].setAttribute("class", "option correct");
+//         console.log("Auto selected correct answer.");
+//       }
+//     }
+//   }
+//   for (i = 0; i < allOptions; i++) {
+//     optionListEl.children[i].classList.add("disable");
+//   }
+//   nextBtn.classList.add("show");
+// }
+// // to show the result at the end (NEED HELP)
+// function showResult() {
+//   quizBoxEl.remove("activeQuiz");
+//   doneEl.classList.add("activeDone");
+//   const scoreFinal = quizBoxEl.querySelector("#finalScore");
+
+//   if (userScore >= 0) {
+//     let scoreTag = "Final Score:" + userScore;
+//     scorefinalEl.innerHTML = scoreTag;
+//   }
+// }
 
 // NEED SOMETHING FOR FORM INPUT
 

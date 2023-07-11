@@ -2,6 +2,8 @@
 
 ## Description
 
+For this project, We had to make a code quiz that works on the browser by using CSS, HTML, and Javascript. I started of my building my HTML and CSS contents that has the title, rules, and start button when you first open the browser, then loads into the quiz page that has a timer, quiz questions and answer options. The option buttons is currently not working.
+
 ## Table of Contents
 
 - [Installation](#installation)
