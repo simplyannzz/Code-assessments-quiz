@@ -34,7 +34,7 @@ The license I choose for this project is the MIT License.
 
 ## Deployed
 
-link:
+link: https://simplyannzz.github.io/Code-assessments-quiz/
 
 ## contact me
 
